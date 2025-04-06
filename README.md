@@ -1,9 +1,7 @@
 # 🔥 Surplus Value Calculator  
 *"If you don’t know your numbers, you don’t know your worth."*  
 
-**[📺 Watch the Demo](https://youtube.com/therantingrooster) | 🌐 [Roosters & Rebels](https://roostersrebels.com)**  
-
-![Calculator Screenshot](https://via.placeholder.com/800x400.png?text=Screenshot+Coming+Soon)  
+** 🌐 [Roosters & Rebels](https://roostersrebels.com)**  
 
 ---
 
@@ -50,7 +48,7 @@ This tool quantifies the **value your labor generates** versus what you’re pai
 ## **💥 Call to Action**  
 - **Found a bug?** [Open an Issue](https://github.com/therantingrooster/SPCalculator/issues).  
 - **Work in tech?** Help automate BLS data pulls ([see TODO](https://github.com/therantingrooster/SPCalculator/issues/1)).  
-- **Union member?** DM [@TheRantingRooster](https://youtube.com/therantingrooster) for custom versions.  
+- **Union / Labor Organizer?** DM [@TheRantingRooster](https://youtube.com/therantingrooster) for custom versions.  
 
 ---
 
