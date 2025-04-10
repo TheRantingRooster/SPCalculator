@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Methodology - Surplus Value Calculator</title>
+    <style>
+        /* COPY-PASTED FROM CALCULATOR FOR CONSISTENCY */
+        body { 
+            font-family: Arial, sans-serif; 
+            line-height: 1.6; 
+            margin: 10px; 
+            color: #333; 
+            text-align: center; 
+        }
+        h1, h2, h3 { 
+            color: #2c3e50; 
+            margin-top: 30px;
+        }
+        .content-box {
+            background: #fff; 
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1); 
+            border-radius: 8px;
+            padding: 25px;
+            max-width: 800px;
+            margin: 20px auto;
+            text-align: left;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            font-size: 15px;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+            font-weight: bold;
+        }
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+        .highlight {
+            color: #8B0000;
+            font-weight: bold;
+        }
+        footer {
+            text-align: center; 
+            margin: 30px 0; 
+            padding: 15px 0; 
+            font-size: 14px; 
+            color: #666; 
+            border-top: 1px solid #eee;
+        }
+        footer a {
+            color: #8B0000; 
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .note {
+            background-color: #f0f8ff;
+            padding: 15px;
+            border-left: 4px solid #4CAF50;
+            margin: 20px 0;
+        }
+    </style>
+</head>
+<body>
+    <h1>Methodology & Data Sources</h1>
+    
+    <div class="content-box">
+        <h2>Revenue Per Employee (RPE) Values</h2>
+        <p>These industry-specific RPE values power our calculations:</p>
+        
+        <table>
+            <tr>
+                <th>Industry</th>
+                <th>RPE Value</th>
+                <th>Source Year</th>
+            </tr>
+            <tr>
+                <td>Retail Trade</td>
+                <td>$616,032</td>
+                <td>2023</td>
+            </tr>
+            <tr>
+                <td>Food Services (Restaurants & Fast Food)</td>
+                <td>$47,996</td>
+                <td>2023</td>
+            </tr>
+            <tr>
+                <td>Accommodation (Hotels & Lodging)</td>
+                <td>$47,996</td>
+                <td>2023</td>
+            </tr>
+            <tr>
+                <td>Construction</td>
+                <td>$793,051</td>
+                <td>2023</td>
+            </tr>
+            <tr>
+                <td>Manufacturing</td>
+                <td>$305,941</td>
+                <td>2023</td>
+            </tr>
+            <tr>
+                <td>Transportation & Warehousing</td>
+                <td>$323,245</td>
+                <td>2023</td>
+            </tr>
+            <tr>
+                <td>Health Care & Social Assistance</td>
+                <td>$50,090</td>
+                <td>2023</td>
+            </tr>
+            <tr>
+                <td>Finance & Insurance</td>
+                <td>$960,919</td>
+                <td>2023</td>
+            </tr>
+            <tr>
+                <td>Educational Services</td>
+                <td>$50,090</td>
+                <td>2023</td>
+            </tr>
+            <tr>
+                <td>Professional, Scientific & Technical Services</td>
+                <td>$170,000</td>
+                <td>2023</td>
+            </tr>
+            <tr>
+                <td>Wholesale Trade</td>
+                <td>$793,051</td>
+                <td>2023</td>
+            </tr>
+            <tr>
+                <td>Information (Media & Telecommunications)</td>
+                <td>$325,504</td>
+                <td>2023</td>
+            </tr>
+            <tr>
+                <td>Arts, Entertainment & Recreation</td>
+                <td>$47,996</td>
+                <td>2023</td>
+            </tr>
+            <tr>
+                <td>Public Administration</td>
+                <td>$44,670</td>
+                <td>2023</td>
+            </tr>
+            <tr>
+                <td>Utilities</td>
+                <td>$850,000</td>
+                <td>2023</td>
+            </tr>
+            <tr>
+                <td>Real Estate</td>
+                <td>$420,000</td>
+                <td>2023</td>
+            </tr>
+            <tr>
+                <td>Administrative & Support Services</td>
+                <td>$150,000</td>
+                <td>2023</td>
+            </tr>
+            <tr>
+                <td>Mining</td>
+                <td>$1,200,000</td>
+                <td>2023</td>
+            </tr>
+            <tr>
+                <td>Agriculture</td>
+                <td>$280,000</td>
+                <td>2023</td>
+            </tr>
+            <tr>
+                <td>Management of Companies</td>
+                <td>$1,100,000</td>
+                <td>2023</td>
+            </tr>
+            <tr>
+                <td>Other Services</td>
+                <td>$75,000</td>
+                <td>2023</td>
+            </tr>
+        </table>
+        
+        <div class="note">
+            <p><strong>Note:</strong> These values match exactly with those used in our calculator. We update annually from authoritative sources.</p>
+        </div>
+    </div>
+    
+    <div class="content-box">
+        <h2>Calculation Methodology</h2>
+        <h3>Surplus Value Formula</h3>
+        <p><span class="highlight">Surplus Value = (Revenue Per Employee) - (Employee Compensation)</span></p>
+        
+        <h3>Key Definitions</h3>
+        <p><strong>Revenue Per Employee (RPE):</strong> Total company revenue divided by number of employees.</p>
+        <p><strong>Employee Compensation:</strong> Annualized salary + benefits (calculated as hourly wage × weekly hours × 52).</p>
+        
+        <h3>Data Sources</h3>
+        <ul>
+            <li>Industry RPE averages: <strong>U.S. Bureau of Labor Statistics, Industry Reports</strong></li>
+            <li>Private company data: <strong>S&P Capital IQ aggregates</strong></li>
+            <li>Salary benchmarks: <strong>BLS Occupational Employment Statistics</strong></li>
+        </ul>
+    </div>
+    
+    <div class="content-box">
+        <h2>Limitations & Notes</h2>
+        <ul>
+            <li>Values represent <strong>industry averages</strong> - individual company performance may vary.</li>
+            <li>For roles without direct revenue attribution (e.g., HR), we use <strong>department-level allocation</strong>.</li>
+            <li>Non-monetary contributions (culture, mentorship) aren't captured in this model.</li>
+        </ul>
+    </div>
+
+    <!-- 🔥 ROOSTERS REBELS FOOTER 🔥 -->
+    <footer>
+        <a href="index.html">Calculator</a> | 
+        <a href="faq.html">FAQ</a>
+        <br>
+        A <a href="https://roostersrebels.com" target="_blank">Rooster's Rebels</a> project by 
+        <a href="https://youtube.com/therantingrooster" target="_blank">The RantingRooster</a>.
+    </footer>
+</body>
+</html>
