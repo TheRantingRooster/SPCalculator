@@ -131,22 +131,18 @@
 
         let currentChart = null;
 
-        function calculateSurplusValue() {
-            const industry = document.getElementById("industry").value;
-            const hourlyWage = parseFloat(document.getElementById("hourlyWage").value);
-            const weeklyHours = parseFloat(document.getElementById("weeklyHours").value);
+// Calculate Surplus Value
+        function calculateSurplusValue() { 
 
-            // Validate inputs
-            if (!hourlyWage || !weeklyHours || hourlyWage <= 0 || weeklyHours <= 0 || weeklyHours > 168) {
-                alert("Please enter valid numbers (0 < hours ≤ 168)");
-                return;
-            }
-
-            // Calculate
-            const annualSalary = hourlyWage * weeklyHours * 52;
-            const revenueGenerated = rpeData[industry];
-            const surplusValue = revenueGenerated - annualSalary;
-
+            const WAGE = Number(document.getElementById('hourlyWage').value) || 0;
+            const HOURS = Number(document.getElementById('weeklyHours').value) || 0;
+  
+                if (WAGE <= 0 || HOURS <= 0) {
+                alert("🔥 Enter ACTUAL wage/hours");
+                return { wage:0, surplus:0 }; // Fail hard
+         }
+  // ...keep existing calculation code...
+    }
             // Show results
             document.getElementById("output").innerHTML = `
                 <strong>Annual Salary:</strong> $${annualSalary.toLocaleString()}<br>
